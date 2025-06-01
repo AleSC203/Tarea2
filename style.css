@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+p.centrar {
+    text-align: center;
+    size: 20px;
+}
+
+div.contenedor {
+    border: 2px none;
+    padding: 10px;
+}
+
+p.Titulo {
+    border: 1px solid black;
+    background-color: hwb(202 74% 6%);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-size: 30px;
+
+    display: block;
+    margin: auto;
+}
+
+img.general {
+    display: block;
+    margin: auto;
+    width: 550px;
+    height: 580px;
+    border: 2px solid black;
+}
+
+hr {
+    height: 15px;
+    background-color: black;
+    border-style: none;
+}
+
+/*Primera parte de la tarea*/
+
+p.padding {
+    border: 1px solid black;
+    background-color: rgb(127, 168, 255);
+    padding: 50px;
+
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+p.dotted {
+    border-style: dotted;
+    text-align: center;
+}
+
+p.dashed {
+    border-style: dashed;
+    text-align: center;
+}
+
+p.solid {
+    border-style: solid;
+    text-align: center;
+}
+
+div.margin {
+    border: 1px double black;
+    margin: 25px;
+    background-color: blanchedalmond;
+    font-size: 15px;
+    text-align: center;
+
+}
+
