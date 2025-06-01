@@ -77,3 +77,203 @@ div.margin {
 
 }
 
+/*Segunda parte*/
+
+div.static {
+    position: static;
+    border: 2px solid #73AD21;
+    width: 180px;
+}
+
+div.relative {
+    position: relative;
+    bottom: 10px;
+    border: 2px solid #73AD21;
+    width: 180px;
+}
+
+div.absolute {
+    position: absolute;
+    border: 2px solid #73AD21;
+    width: 180px;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    border: 2px solid #73AD21;
+}
+
+
+/*Float y clear*/
+
+.imagen-izquierda {
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.limpiar-izquierda {
+    clear: left;
+}
+
+
+.imagen-right {
+    float: right;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.limpiar-right {
+    clear: right;
+}
+
+
+
+.imagen-none {
+    float: left;
+    width: 150px;
+}
+
+.limpiar-none {
+    clear: right;
+}
+
+
+
+.imagen-both {
+    float: right;
+    width: 150px;
+}
+
+.limpiar-both {
+    clear: right;
+}
+
+
+
+/*Display*/
+
+.bloque {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.inline {
+    display: inline;
+    padding: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.none {
+    display: none;
+    /* Oculta completamente el contenido */
+}
+
+
+/*Overflow*/
+
+div.visible {
+    width: 200px;
+    height: 100px;
+    overflow: visible;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+div.hidden {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+div.scroll {
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+div.auto {
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+/*Visibility*/
+
+.caja {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    border: 2px solid blue;
+
+    display: block;
+    margin: auto;
+}
+
+div.hiddenVis {
+    visibility: hidden;
+}
+
+tr.collapse {
+    visibility: collapse;
+
+    display: block;
+    margin: auto;
+}
+
+
+/*     Z-INDEX */
+
+#myDIV {
+    width: 100%;
+    position: relative;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+#myDIV div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: yellow;
+    border: 1px solid;
+    opacity: 0.5;
+}
+
+#myBox {
+    position: absolute;
+    background-color: rgb(131, 62, 241) !important;
+    opacity: 1 !important;
+    z-index: 2;
+}
+
+.centrarParrafo {
+        text-align: center;
+        position: relative; /* Asegura que no sea cubierto */
+        z-index: 5; /* Opcional, en caso de solapamiento */
+    }

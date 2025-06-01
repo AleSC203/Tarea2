@@ -70,6 +70,319 @@
     </section>
 
 
+    <!-- Segunda parte -->
+
+
+    <Section>
+        <br>
+        <div style="border: 3px dotted black;">
+            <p class="centrar"><strong>Position: Static</strong></p>
+            <p class="centrar"><strong>¿Como funciona?</strong> <br>
+                Los elementos HTML se posicionan de forma estática de forma predeterminada. <br>
+                un elemento con posicion estática no se posiciona de ninguna manera especial, <br>
+                ya que siempre se posiciona de acuerdo al flujo normal de la página. </p>
+
+            <div class="static">Uso de la posición statica</div>
+        </div>
+
+
+
+        <br>
+        <div style="border: 3px dotted rgb(142, 193, 252);">
+            <p class="centrar"><strong>Position: relative</strong></p>
+            <p class="centrar"><strong>¿Como funciona?</strong> <br>
+                El elemento sigue ocupando su espacio habitual en el documento, como sino tuviera posición absoluta o
+                fija <br>
+                Es util cuando se desea mover un elemento sin afectar el diseño de los demás, <br>
+                ya que su despazamiento no altera el flujo del documento.</p>
+
+            <div class="relative">Uso de la posición relativa</div>
+        </div>
+
+
+        <br>
+        <div style="border: 3px dotted black;">
+            <p class="centrar"><strong>Position: absolute</strong></p>
+            <p class="centrar"><strong>¿Como funciona?</strong> <br>
+                La posición absoluta en CSS es un método de posicionamiento que permite que un elemento se ubique en la
+                página independientemente del flujo normal del documento.</p>
+
+            <div class="absolute">Uso de la posición absoluta</div>
+        </div>
+
+
+        <br>
+        <div style="border: 3px dotted rgb(142, 193, 252);">
+            <p class="centrar"><strong>Position: fixed</strong></p>
+            <p class="centrar"><strong>¿Como funciona?</strong> <br>
+                Se posiciona con respecto a la ventana gráfica, lo que significa que permanece en la misma posición
+                incluso al desplazarse por la página.
+                <br>Las propiedades top, right, bottom y left se utilizan para posicionar el elemento.
+                <br> <strong>El ejemplos para esta propiedad lo puedes ver en un div con borde verde ubicado en la parte
+                    derecha inferior de la pantalla .</strong>
+            </p>
+
+            <div class="fixed"> Position: fixed;</div>
+        </div>
+
+        <hr>
+    </Section>
+
+
+
+    <!-- Float y clear -->
+
+    <section>
+        <br><br>
+        <p class="centrar"><strong>Utilizando Float left y clear left</strong></p>
+        <div class="contenedor">
+            <img src="images/espacio.png" alt="Imagen flotante" class="imagen-izquierda">
+            <p>El float left permite que la imagen quede a nivel del parrafo. <br>
+                EL parrafo estara alrededor de la imagen del lado derecho.</p>
+            <p class="limpiar-izquierda">Este texto inicia después de la imagen flotante ya que estamos utilizando el
+                clear left.</p>
+        </div>
+    </section>
+
+    <section>
+        <br><br>
+        <hr style="height: 2px;">
+        <p class="centrar"><strong>Utilizando Float right y clear right</strong></p>
+        <div class="contenedor">
+            <img src="images/espacio.png" alt="Imagen flotante" class="imagen-right">
+            <p>Este texto rodea la imagen a la izquierda ya que se esta utilizando el float-right.</p>
+            <p class="limpiar-right">Este texto inicia después de la imagen flotante ya que se esta utilizando el clear
+                derecha.</p>
+        </div>
+    </section>
+
+    <section>
+        <br><br>
+        <hr style="height: 2px;">
+        <p class="centrar"><strong>Uso de Float none y Clear none</strong></p>
+
+        <div class="contenedor">
+            <img src="images/espacio.png" alt="Imagen sin flotación" class="imagen-none">
+            <p>
+                La propiedad <strong>float: none;</strong> indica que el elemento no flotará ni a la izquierda ni a la
+                derecha.
+                Esto significa que la imagen mantendrá su posición dentro del flujo natural del documento, sin que otros
+                elementos la rodeen.
+            </p>
+            <p class="limpiar-none">
+                La propiedad <strong>clear: none;</strong> indica que este elemento no aplicará ninguna limpieza de
+                flotantes.
+                Esto significa que seguirá colocándose junto a elementos flotantes si los hay, sin forzar un salto de
+                línea.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <br><br>
+        <hr style="height: 2px;">
+        <p class="centrar"><strong>Uso de Float both y Clear both</strong></p>
+
+        <div class="contenedor">
+            <img src="images/espacio.png" alt="Imagen flotante" class="imagen-both">
+            <p>
+                La propiedad <strong>float: both;</strong> no es comúnmente utilizada, pero en algunos navegadores
+                puede interpretarse como una flotación tanto a la izquierda como a la derecha, aunque su comportamiento
+                puede ser impredecible. Generalmente, se recomienda usar `left` o `right` en lugar de `both`.
+            </p>
+            <p class="limpiar-both">
+                La propiedad <strong>clear: both;</strong> asegura que este elemento no quede junto a ningún elemento
+                flotante,
+                ya sea a la izquierda o derecha. Se usa comúnmente después de bloques flotantes para evitar que el
+                diseño se desajuste.
+            </p>
+        </div>
+    </section>
+    <hr>
+
+
+
+    <!-- Display propiedades -->
+
+    <section>
+        <br><br>
+        <p class="centrar"><strong>Exploración de la propiedad Display en CSS</strong></p>
+
+        <!-- Ejemplo de display: block -->
+        <div class="bloque">
+            <p><strong>Display: block;</strong></p>
+            <p> ¿Qué es? <br> Este valor hace que el elemento ocupe todo el ancho disponible y siempre comience en una
+                nueva línea. </p>
+            <p> ¿Para qué se usa? <br> Se usa en elementos como `div`, `p`, `section`, permitiendo estructurar el
+                contenido en bloques separados.</p>
+            <p class="centrar">Ejemplo: <br></p>
+            <p class="centrar">Hola</p>
+            <p class="centrar">hi</p>
+            <p class="centrar"><strong>Nota: A simple vista no se nota pero hola y hi se encuentran dentro de una
+                    etiqueta p la cual hace que no puedan estar ambas palabras en la misma linea.</strong></p>
+        </div>
+
+
+        <hr style="height: 2px;">
+        <!-- Ejemplo de display: inline -->
+        <div class="inline">
+            <p><strong>Display: inline;</strong></p>
+            <p>¿Qué es? <br> Este valor permite que el elemento se mantenga en la misma línea con otros elementos.</p>
+            <p>¿Para qué se usa? <br> Se usa para estilos de texto como `span`, `a`, `strong`, lo que ayuda a aplicar
+                estilos sin afectar la disposición.</p>
+            <p class="centrar">Ejemplo: <br></p>
+            <span>Hola,</span><span> hi</span>
+            <p class="centrar"><strong>Nota: En este ejemplo ambas palabras se encuentran en etiquetas de span distintas
+                    pero esta etiqueta es span la cual si permite que sigan en la misma linea.</strong></p>
+        </div>
+
+
+        <hr style="height: 2px;">
+        <!-- Ejemplo de display: inline-block -->
+        <div class="inline-block">
+            <p><strong>Display: inline-block;</strong></p>
+            <p>¿Qué es? <br> Similar a `inline`, pero permite modificar el tamaño con `width` y `height`.</p>
+            <p>¿Para qué se usa? <br> Se usa en botones, tarjetas y elementos que deben alinearse sin afectar el flujo
+                normal.</p>
+        </div>
+
+
+        <hr style="height: 2px;">
+        <!-- Ejemplo de display: none -->
+        <div class="none">
+            <p><strong>Display: none;</strong></p>
+            <p> ¿Qué es? <br> Este valor oculta completamente el elemento, sin ocupar espacio en la página. </p>
+            <p>¿Para qué se usa? <br> Se usa para menús ocultos, elementos dinámicos o contenido que se activa con
+                JavaScript.</p>
+        </div>
+        <hr>
+    </section>
+
+
+
+
+    <!-- Uso del overflow -->
+    <section>
+        <!-- Overflow: visible -->
+        <p class="centrar"> Uso del Overflow: visible</p>
+        <div class="visible">
+            El contenido que excede el contenedor se muestra fuera de sus límites sin restricciones. <br>
+            Este es el comportamiento que toma el overflow: visible
+            Este es un ejemplo de prueba.
+        </div>
+        <hr style="height: 2px; color: azure;">
+
+        <!--  Overflow: hidden  -->
+        <p class="centrar"> Uso del Overflow: hidden</p>
+        <div class="hidden">
+            El contenido que excede el contenedor se oculta y no es accesible. <br>
+            Este es el comportamiento que toma el overflow: hidden
+            Útil para evitar desbordamientos no deseados en layouts específicos.
+        </div>
+        <hr style="height: 2px;">
+
+        <!--  Overflow: scroll -->
+        <p class="centrar"> Uso del Overflow: scroll</p>
+        <div class="scroll">
+            Se agregan barras de desplazamiento (scroll) tanto en eje X como en eje Y si el contenido supera el tamaño
+            del contenedor. <br>
+            Este es el comportamiento que toma el overflow: scroll. <br>
+            Ideal para contenedores con contenido grande que debe ser accesible mediante desplazamiento.
+        </div>
+        <hr style="height: 2px;">
+
+        <!--  Overflow: auto -->
+        <p class="centrar"> Uso del Overflow: auto</p>
+        <div class="auto">
+            Se agrega scroll solo cuando es necesario (similar a scroll, pero sin forzar siempre la barra). <br>
+            Este es el comportamiento que toma el overflow: auto. <br>
+            Recomendado en la mayoría de los casos para manejar contenido variable sin forzar el scroll cuando no es
+            necesario.
+        </div>
+        <hr style="height: 2px;">
+    </section>
+
+
+
+
+
+    <!--   visibility -->
+    <section>
+        <hr>
+        <br><br>
+        <!--   Visibility: visible -->
+        <p class="centrar"><strong>Visibility: visible </strong><br>
+            Como su nombre lo dice, lo que hace es mostrar el elemento.</p>
+        <div class="caja">Visible</div>
+        <hr style="height: 2px;">
+
+
+        <!--  Visibility: hidden -->
+        <p class="centrar"><strong>Visibility: hidden</strong> <br>
+            Como su nombre lo dice, oculta el elemento pero aún se sigue ocupando su espacio respectivo.</p>
+        <div class="caja hiddenVis">Hidden (oculto, pero conserva espacio)</div>
+        <hr style="height: 2px;">
+
+
+        <!-- Visibility: Colapse -->
+        <p class="centrar"><strong>Visibility: collapse</strong> <br>
+            El elemento collapse está diseñado para elementos de tabla (tr,td,th). <br>
+            Su función es ocultar filas o columnas de una tabla y eliminar su espacio del diseño, sin eliminar el DOM
+        </p>
+        <table border="1px">
+            <tr>
+                <td>Fila visible</td>
+            </tr>
+            <tr class="collapse">
+                <td>Fila oculta (con visibility: collapse)</td>
+            </tr>
+            <tr>
+                <td>Fila visible</td>
+            </tr>
+        </table>
+        <p><strong>Nota: en medio de estas dos casillas hay una casilla que fue eliminada.</strong></p>
+    </section>
+
+
+
+
+    <!--     z-index -->
+    <section>
+        <br>
+        <p class="centrar">Z-index</p>
+        <p class="centrar">
+            ¿Para que funciona? <br>
+            El <strong>Z-index</strong> en <i>CSS</i> controla la posición en la profundidad de los elementos en una
+            página web, <br>
+            es decir, determina qué elemento aparecerá delante o detrás cuando se superponen.</p>
+        <br>
+        <p class="centrar">Algunas de sus propiedades son:</p>
+
+        <section>
+        <div id="myDIV">
+            <div id="myBox">myBox</div>
+            <div style="top:20px;left:20px;z-index:0;">z-index 0</div>
+            <div style="top:40px;left:40px;z-index:1;">z-index 1</div>
+            <div style="top:60px;left:60px;z-index:2;">z-index 2</div>
+            <div style="top:80px;left:80px;z-index:3;">z-index 3</div>
+            <div style="top:100px; left:100px; z-index: auto;">Prueba auto</div>
+            <div style="top:120px; left:120px; z-index: inherit;">Prueba inherit</div>
+            <div style="top:140px; left:140px; z-index: initial;">Prueba initial</div>
+            <div style="top:160px; left:160px; z-index: unset;">Prueba unset</div>
+        </div>
+        </section>
+        <br>
+        
+    <p class="centrarParrafo">
+        Breve explicación de cada propiedad de `z-index`: <br>
+        <strong>Auto:</strong> Es el valor por defecto y sigue el orden normal de apilamiento. <br>
+        <strong>inherit:</strong> Hereda el valor de `z-index` del padre. <br>
+        <strong>initial:</strong> Restablece el `z-index` a su valor predeterminado (`auto`). <br>
+        <strong>unset:</strong> Se comporta como `inherit` si el padre tiene `z-index`, y como `initial` si no lo tiene. <br>
+    </p>
+
+        <hr style="height: 2px;">
+    </section>
 
 </body>
 
