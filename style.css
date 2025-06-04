@@ -273,7 +273,75 @@ tr.collapse {
 }
 
 .centrarParrafo {
-        text-align: center;
-        position: relative; /* Asegura que no sea cubierto */
-        z-index: 5; /* Opcional, en caso de solapamiento */
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+
+
+
+
+
+/* flex Tercera parte*/
+
+
+/* Panel de configuración */
+.control-panel {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgb(240, 237, 193);
+    border: 1px solid black;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: unset;
+    width: 80%;
+    height: 700px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+}
+
+.item {
+    width: 80px;
+    height: auto;
+    background: lightblue;
+    margin: 5px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    flex: 0 0 80px;
+    /* Se aplica flex directamente */
+    order: 0;
+    align-self: unset;
+    flex-grow: 0;
+    max-width: none;
+    flex-shrink: 1;
+    flex-basis: 80px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+    .item {
+        flex-basis: 100%;
     }
+}
+
+
+/* Fondo */
+.ColorFondo {
+    border: 1px solid black;
+    background-color: rgb(240, 237, 193);
+    padding: 50px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-size: 20px;
+}

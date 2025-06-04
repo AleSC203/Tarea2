@@ -359,30 +359,268 @@
         <p class="centrar">Algunas de sus propiedades son:</p>
 
         <section>
-        <div id="myDIV">
-            <div id="myBox">myBox</div>
-            <div style="top:20px;left:20px;z-index:0;">z-index 0</div>
-            <div style="top:40px;left:40px;z-index:1;">z-index 1</div>
-            <div style="top:60px;left:60px;z-index:2;">z-index 2</div>
-            <div style="top:80px;left:80px;z-index:3;">z-index 3</div>
-            <div style="top:100px; left:100px; z-index: auto;">Prueba auto</div>
-            <div style="top:120px; left:120px; z-index: inherit;">Prueba inherit</div>
-            <div style="top:140px; left:140px; z-index: initial;">Prueba initial</div>
-            <div style="top:160px; left:160px; z-index: unset;">Prueba unset</div>
-        </div>
+            <div id="myDIV">
+                <div id="myBox">myBox</div>
+                <div style="top:20px;left:20px;z-index:0;">z-index 0</div>
+                <div style="top:40px;left:40px;z-index:1;">z-index 1</div>
+                <div style="top:60px;left:60px;z-index:2;">z-index 2</div>
+                <div style="top:80px;left:80px;z-index:3;">z-index 3</div>
+                <div style="top:100px; left:100px; z-index: auto;">Prueba auto</div>
+                <div style="top:120px; left:120px; z-index: inherit;">Prueba inherit</div>
+                <div style="top:140px; left:140px; z-index: initial;">Prueba initial</div>
+                <div style="top:160px; left:160px; z-index: unset;">Prueba unset</div>
+            </div>
         </section>
         <br>
-        
-    <p class="centrarParrafo">
-        Breve explicación de cada propiedad de `z-index`: <br>
-        <strong>Auto:</strong> Es el valor por defecto y sigue el orden normal de apilamiento. <br>
-        <strong>inherit:</strong> Hereda el valor de `z-index` del padre. <br>
-        <strong>initial:</strong> Restablece el `z-index` a su valor predeterminado (`auto`). <br>
-        <strong>unset:</strong> Se comporta como `inherit` si el padre tiene `z-index`, y como `initial` si no lo tiene. <br>
-    </p>
+
+        <p class="centrarParrafo">
+            Breve explicación de cada propiedad de `z-index`: <br>
+            <strong>Auto:</strong> Es el valor por defecto y sigue el orden normal de apilamiento. <br>
+            <strong>inherit:</strong> Hereda el valor de `z-index` del padre. <br>
+            <strong>initial:</strong> Restablece el `z-index` a su valor predeterminado (`auto`). <br>
+            <strong>unset:</strong> Se comporta como `inherit` si el padre tiene `z-index`, y como `initial` si no lo
+            tiene. <br>
+        </p>
 
         <hr style="height: 2px;">
+        <br><br>
     </section>
+
+
+
+
+
+    <section class="control-panel">
+        <p><strong>Configuración de Flexbox</strong></p>
+
+        <div>
+            <label>Flex Direction:</label>
+            <select onchange="changeFlexDirection(this.value)">
+                <option value="row">row</option>
+                <option value="column">column</option>
+                <option value="row-reverse">row-reverse</option>
+                <option value="column-reverse">column-reverse</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Flex Wrap:</label>
+            <select onchange="changeFlexWrap(this.value)">
+                <option value="nowrap">nowrap</option>
+                <option value="wrap">wrap</option>
+                <option value="wrap-reverse">wrap-reverse</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Justify Content:</label>
+            <select onchange="changeJustifyContent(this.value)">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="space-evenly">space-evenly</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Align Items:</label>
+            <select onchange="changeAlignItems(this.value)">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="baseline">baseline</option>
+                <option value="stretch">stretch</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Align Content:</label>
+            <select onchange="changeAlignContent(this.value)">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="stretch">stretch</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Flex Grow:</label>
+            <select onchange="changeFlexGrow(this.value, 0)">
+                <option value="0">0 (Desactivar)</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Flex Shrink:</label>
+            <select onchange="changeFlexShrink(this.value, 0)">
+                <option value="0">0 (Desactivar)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Flex Basis:</label>
+            <select onchange="changeFlexBasis(this.value, 0)">
+                <option value="80">80px</option>
+                <option value="150">150px</option>
+                <option value="200">200px</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Order:</label>
+            <select onchange="changeOrder(this.value, 0)">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Align Self:</label>
+            <select onchange="changeAlignSelf(this.value, 0)">
+                <option value="auto">auto</option>
+                <option value="flex-start">flex-start</option>
+                <option value="center">center</option>
+                <option value="flex-end">flex-end</option>
+                <option value="stretch">stretch</option>
+            </select>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <script>
+        function changeFlexDirection(value) {
+            document.querySelector('.container').style.flexDirection = value;
+        }
+
+        function changeFlexWrap(value) {
+            document.querySelector('.container').style.flexWrap = value;
+        }
+
+        function changeJustifyContent(value) {
+            document.querySelector('.container').style.justifyContent = value;
+        }
+
+        function changeAlignItems(value) {
+            document.querySelector('.container').style.alignItems = value;
+        }
+
+        function changeAlignContent(value) {
+            document.querySelector('.container').style.alignContent = value;
+        }
+
+
+        function changeFlexGrow(value) {
+            document.querySelectorAll('.item').forEach(item => {
+                item.style.flexGrow = parseInt(value, 10);
+            });
+        }
+
+        function changeFlexShrink(value) {
+            document.querySelectorAll('.item').forEach(item => {
+                item.style.flexShrink = parseInt(value, 10);
+            });
+        }
+
+        function changeFlexBasis(value) {
+            document.querySelectorAll('.item').forEach(item => {
+                item.style.flexBasis = value + 'px';
+            });
+        }
+
+        function changeOrder(value, index) {
+            document.querySelectorAll('.item')[index].style.order = parseInt(value, 10);
+        }
+
+        function changeAlignSelf(value, index) {
+            document.querySelectorAll('.item')[index].style.alignSelf = value;
+        }
+    </script>
+
+
+    <section>
+        <div class="ColorFondo">
+            <p class="centrar">La propiedad <strong>display: flex;</strong> convierte un elemento en un contenedor
+                flexible, permitiendo que sus elementos internos se alineen de manera más dinámica y responsiva.</p>
+
+            <p class="centrar"><strong>flex-direction:</strong> Define la dirección en la que los elementos hijos se
+                alinean dentro del contenedor flexible. Puede ser <em>row</em> (horizontal por defecto), <em>column</em>
+                (vertical), <em>row-reverse</em> (horizontal inverso) o <em>column-reverse</em> (vertical inverso).</p>
+
+            <p class="centrar"><strong>flex-wrap:</strong> Controla si los elementos hijos deben permanecer en una sola
+                línea (<em>nowrap</em>) o si pueden dividirse en múltiples líneas (<em>wrap</em> o
+                <em>wrap-reverse</em>).
+            </p>
+
+            <p class="centrar"><strong>flex-flow:</strong> Es una propiedad abreviada que permite definir
+                <em>flex-direction</em> y <em>flex-wrap</em> en una sola línea de código.
+            </p>
+
+            <p class="centrar"><strong>justify-content:</strong> Controla la alineación de los elementos en el eje
+                principal. Puede alinearlos al inicio (<em>flex-start</em>), al final (<em>flex-end</em>), en el centro
+                (<em>center</em>), distribuir el espacio entre ellos (<em>space-between</em>), con espacio alrededor
+                (<em>space-around</em>) o equitativamente (<em>space-evenly</em>).</p>
+
+            <p class="centrar"><strong>align-items:</strong> Define cómo se alinean los elementos en el eje
+                perpendicular al principal. Puede ser <em>flex-start</em> (alineados arriba), <em>flex-end</em>
+                (alineados abajo), <em>center</em> (centrados), <em>baseline</em> (alineados según su línea de texto) o
+                <em>stretch</em> (ocupan todo el espacio disponible).
+            </p>
+
+            <p class="centrar"><strong>align-content:</strong> Se usa cuando los elementos están en múltiples filas
+                (cuando <em>flex-wrap: wrap;</em> está activado). Controla cómo se distribuyen las filas dentro del
+                contenedor, con opciones como <em>flex-start</em>, <em>flex-end</em>, <em>center</em>,
+                <em>space-between</em>, <em>space-around</em> y <em>stretch</em>.
+            </p>
+
+            <p class="centrar"><strong>Flex Items:</strong> Son los elementos dentro de un contenedor flexible y pueden
+                tener propiedades que determinan su comportamiento individual.</p>
+
+            <p class="centrar"><strong>order:</strong> Define el orden de los elementos sin modificar el HTML. Un número
+                menor significa que aparecerá antes. Por defecto, todos los elementos tienen <em>order: 0;</em>.</p>
+
+            <p class="centrar"><strong>flex-grow:</strong> Controla cuánto puede crecer un elemento en relación con los
+                demás si hay espacio disponible. Un valor mayor hará que el elemento crezca más.</p>
+
+            <p class="centrar"><strong>flex-shrink:</strong> Define qué tan rápido se reduce un elemento cuando el
+                espacio es limitado. Un valor más alto significa que el elemento se encogerá más.</p>
+
+            <p class="centrar"><strong>flex-basis:</strong> Especifica el tamaño inicial del elemento antes de que se
+                apliquen reglas de crecimiento o reducción. Puede expresarse en píxeles, porcentaje o <em>auto</em>.</p>
+
+            <p class="centrar"><strong>flex:</strong> Es una propiedad abreviada que combina <em>flex-grow</em>,
+                <em>flex-shrink</em> y <em>flex-basis</em> en una sola línea de código.
+            </p>
+
+            <p class="centrar"><strong>align-self:</strong> Permite que un elemento individual tenga una alineación
+                diferente a la definida en <em>align-items</em> dentro del contenedor.</p>
+
+            <p class="centrar"><strong>Flex Responsive:</strong> Es el principio de hacer que los elementos dentro del
+                contenedor flex se adapten automáticamente a diferentes tamaños de pantalla.</p>
+
+            <p class="centrar">Para hacer un diseño verdaderamente responsivo usando flexbox, se pueden utilizar
+                <em>flex-wrap: wrap;</em> para dividir los elementos en varias líneas, junto con <em>media queries</em>
+                para ajustar el tamaño y comportamiento de los elementos en dispositivos pequeños.
+            </p>
+        </div>
+
+    </section>
+
+    <hr style="height: 2px;">
+
 
 </body>
 
